@@ -1,0 +1,29 @@
+<app-search [name]="filters.name"></app-search>
+
+<div class="container">
+  <h3>Hospedagens</h3>
+
+  <div *ngFor="let prop of getProperties()">
+    <div class="col s12 m7">
+      <h5 class="header">
+        <a [title]="prop.name + ' details'" [routerLink]="['/location', prop.id]">
+          {{ prop.name }}
+        </a>
+      </h5>
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="../../assets/img/imagem.jpg">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p *ngIf="prop.description">Descrição: {{ prop.description }}</p>
+            <p>Valor: R$ {{prop.price}}</p>
+          </div>
+          <div class="card-action">
+            <button (click)="reserve()">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
