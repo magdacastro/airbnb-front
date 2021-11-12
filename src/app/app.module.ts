@@ -23,9 +23,6 @@ import { PropertyHostDetailsComponent } from './property-host-details/property-h
     SearchComponent,
     LocationListComponent,
     BodyComponent,
-    PropertyDetailsComponent,
-    PropertyHostDetailsComponent,
-    
   ],
   imports: [
     BrowserModule,
