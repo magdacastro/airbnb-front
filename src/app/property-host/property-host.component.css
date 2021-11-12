@@ -1,0 +1,24 @@
+.host {
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding-left: 40%;
+}
+
+.logo {
+    padding-top: 2%;
+    width: 10%;
+    padding-left: 8%;
+}
+
+.title {
+    padding-top: 28%;
+    text-align: center;
+}
+
+.host-form {
+    padding-top: 6%;
+    padding-left: 40%;
+    padding-right: 45%;
+    padding-bottom: 12%;
+}

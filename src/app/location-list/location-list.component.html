@@ -30,7 +30,7 @@
   <div *ngFor="let prop of getProperties()">
     <div class="col s12 m7">
       <h5 class="header">
-        <a [title]="prop.name + ' details'" [routerLink]="['/location-details', prop.id]">
+        <a [title]="prop.name + ' - Details'" routerLink="/details">
           {{ prop.name }}
         </a>
       </h5>
