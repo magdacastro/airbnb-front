@@ -1,12 +1,10 @@
-<app-search [name]="filters.name"></app-search>
-
 <div class="container">
   <h3>Hospedagens</h3>
 
   <div *ngFor="let prop of getProperties()">
     <div class="col s12 m7">
       <h5 class="header">
-        <a [title]="prop.name + ' details'" [routerLink]="['/location', prop.id]">
+        <a [title]="prop.name + ' - Details'" routerLink="/details">
           {{ prop.name }}
         </a>
       </h5>

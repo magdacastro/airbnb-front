@@ -27,5 +27,19 @@ export const properties = [
     description: 'Apartamento no centro da cidade com sacada e estacionamento.',
     location: 'Porto Alegre',
     price: 2500.00
+  },
+  {
+    id: 4,
+    name: 'Espaço inteiro: apartamento',
+    description: 'Você terá a acomodação do tipo apartamento só para você..',
+    location: 'Gramado',
+    price: 311.00
+  },
+  {
+    id: 5,
+    name: 'Espaço inteiro: casa residencial',
+    description: 'Você terá a acomodação do tipo casa só para você.',
+    location: 'Gramado',
+    price: 165.00
   }
 ];
