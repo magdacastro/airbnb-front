@@ -17,7 +17,7 @@ import { BodyComponent } from './body/body.component';
     FooterComponent,
     SearchComponent,
     LocationListComponent,
-    BodyComponent
+    BodyComponent,
   ],
   imports: [
     BrowserModule,

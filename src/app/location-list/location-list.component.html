@@ -1,4 +1,28 @@
-<app-search [name]="filters.name"></app-search>
+<app-search (searchChange)="inputChange($event)" [name]="filters.name"></app-search>
+
+<!--<div class="container">
+  <ul class="collection" *ngFor="let prop of getProperties()">
+    <li class="collection-item avatar">
+      <img src="assets/img/imagem.jpg" alt="" class="circle">
+      <a class="title" [title]="prop.name + ' details'" [routerLink]="['/location-details', prop.id]">{{ prop.name }}</a>
+      <p>
+        {{ prop.description }}
+      </p>
+      <span class="secondary-content"><i class="material-icons">grade</i></span>
+    </li>
+  </ul>
+</div>-->
+<div class="container" *ngIf="displayGrid == true">
+  <div class="collection">
+    <a href="#!" class="collection-item" *ngFor="let prop of getProperties()">{{prop.name}}
+    <br/><span>{{ prop.description }}</span>
+    </a>
+  </div>
+</div>
+
+<!--
+
+  colocar a classe active no item
 
 <div class="container">
   <h3>Hospedagens</h3>
@@ -6,7 +30,7 @@
   <div *ngFor="let prop of getProperties()">
     <div class="col s12 m7">
       <h5 class="header">
-        <a [title]="prop.name + ' details'" [routerLink]="['/location', prop.id]">
+        <a [title]="prop.name + ' details'" [routerLink]="['/location-details', prop.id]">
           {{ prop.name }}
         </a>
       </h5>
@@ -27,3 +51,6 @@
     </div>
   </div>
 </div>
+-->
+
+

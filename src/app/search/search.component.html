@@ -1,6 +1,33 @@
 <div class="container">
-  <div class="form-group">
-    <label for="locationList">Localização</label>
-    <input class="form-control" list="datalistOptions" id="locationList" placeholder="Para onde você vai?" [(ngModel)]="formInput">
+  <div class="row">
+    <div class="form-group col s4">
+      <label for="locationList">Localização</label>
+      <input class="form-control" list="datalistOptions" id="locationList" placeholder="Para onde você vai?" (ngModelChange)="inputChange($event)" [(ngModel)]="formInput">
+    </div>
+    <div class="form-group col s2">
+      <label for="checkin">Check-in</label>
+      <input type="text" id="checkin" placeholder="Quando?" class="datepicker">
+    </div>
+    <div class="form-group col s2">
+      <label for="checkout">Check-out</label>
+      <input type="text" id="checkout" placeholder="Quando?" class="datepicker">
+    </div>
+    <div class="form-group col s2 form-modify">
+      <label for="modal-trigger">Hóspedes</label>
+      <a class="btn btn-modify modal-trigger" id="modal-trigger" href="#modal"><span>{{quantidade ?  quantidade + " hóspedes" : "Quantos?"}}</span></a>
+    </div>
   </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal" class="modal">
+  <ul class="collection">
+    <li class="collection-item active">Adultos <button class="btn" (click)="add(this)">
+      <i class="material-icons">add</i></button><span>{{quantidade}}</span>
+      <button class="btn" (click)="remove(this)">
+      <i class="material-icons">remove</i></button></li>
+    <li class="collection-item">Alvin</li>
+    <li class="collection-item">Alvin</li>
+    <li class="collection-item">Alvin</li>
+  </ul>
 </div>
