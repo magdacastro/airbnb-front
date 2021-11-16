@@ -12,8 +12,6 @@ import { LoginHostComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { HostPageComponent } from './host-page/host-page.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { PropertyDetailsComponent } from './property-details/property-details.component';
-import { PropertyHostDetailsComponent } from './property-host-details/property-host-details.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -25,8 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     LocationListComponent,
     BodyComponent,
     HostPageComponent,
-    SignUpComponent,
-    PropertyHostDetailsComponent
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: '', component: LocationListComponent },
       { path: 'login', component: LoginHostComponent},
       { path: 'anfitriao', component: HostPageComponent},
-      { path: 'cadastre-se', component: SignUpComponent},
-      { path: 'details', component: PropertyDetailsComponent },
-      { path: 'details-host', component: PropertyHostDetailsComponent },
+      { path: 'cadastre-se', component: SignUpComponent}
     ])
   ],
   providers: [],

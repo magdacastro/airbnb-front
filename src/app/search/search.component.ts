@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Property, properties } from '../models/properties';
+import { Property } from '../models/properties';
 
 @Component({
   selector: 'app-search',
@@ -8,7 +8,6 @@ import { Property, properties } from '../models/properties';
 })
 
 export class SearchComponent implements OnInit {
-  private prop: Property[];
   public quantidade:number = 0;
   public formInput: string = "";
 
@@ -16,7 +15,6 @@ export class SearchComponent implements OnInit {
   @Output() searchChange = new EventEmitter<String>();
 
   constructor() {
-    this.prop = properties;
     this.formInput = this.name;
   }
 

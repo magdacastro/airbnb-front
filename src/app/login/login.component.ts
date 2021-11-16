@@ -13,8 +13,11 @@ export class LoginHostComponent implements OnInit {
   public user: User = {
     id: 0,
     name: "",
+    socialname: "",
     properties: [],
-    email: "",
+    sex: { type: ""},
+    datebirth: { day: 0, month: 0, year: 0},
+    email:"",
     password: ""
   };
 

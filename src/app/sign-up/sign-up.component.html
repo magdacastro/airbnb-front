@@ -1,9 +1,89 @@
-<p>Nome:</p>
-<input type="text" name="" id="">
-<div class="divider"></div>
-<p>Email:</p>
-<input type="text" name="" id="">
-<div class="divider"></div>
-<p>Senha:</p>
-<input type="password" name="" id="">
+<div class="container">
+  <div class="row">
+    <p>Dados de acesso:</p>
+    <div class="col s6">
+      <div class="col s12">
+        <p>Nome</p>
+        <input type="text" name="name" id="name" [(ngModel)]="user.name">
+      </div>
+      <div class="col s12">
+        <p>Nome social</p>
+        <input type="text" name="socialname" id="socialname" [(ngModel)]="user.socialname">
+      </div>
+      <div class="col s12">
+        <p>Email</p>
+        <input type="text" name="email" id="email" [(ngModel)]="user.email">
+      </div>
+      <div class="col s12">
+        <p>Senha:</p>
+        <input type="password" name="password" id="password" [(ngModel)]="user.password">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <p>Data de nascimento:</p>
+    <div class="col s3">
+      <div class="input-field col s12">
+        <select [(ngModel)]="user.datebirth.month">
+          <option value="" disabled selected>Mês</option>
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+        </select>
+      </div>
+    </div>
+    <div class="col s2">
+      <div class="input-field col s12">
+        <select [(ngModel)]="user.datebirth.day">
+          <option value="" disabled selected>Dia</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+        </select>
+      </div>
+    </div>
+    <div class="col s2">
+      <div class="input-field col s12">
+        <select  [(ngModel)]="user.datebirth.year">
+          <option value="" disabled selected>Ano</option>
+          <option value="1">2020</option>
+          <option value="2">2019</option>
+          <option value="3">2018</option>
+          <option value="4">2017</option>
+          <option value="5">2016</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <p>Sexo:</p>
+      <div class="col s4">
+        <label>
+          <input class="form-check-input" name="group1" value="female" [(ngModel)]="user.sex" type="radio" checked />
+          <span>Feminino</span>
+        </label>
+      </div>
+      <div class="col s4">
+        <label>
+          <input class="form-check-input" name="group1" value="male" [(ngModel)]="user.sex" type="radio" />
+          <span>Masculino</span>
+        </label>
+      </div>
+      <div class="col s4">
+        <label>
+          <input class="form-check-input" name="group1" value="notbinary" [(ngModel)]="user.sex" type="radio" />
+          <span>Não-binário</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="btn-signup">
+    <button class="btn" (click)="storeProperty()">Cadastrar</button>
+  </div>
+</div>
 

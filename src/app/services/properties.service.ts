@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Property } from '../models/properties';
+import { User } from '../models/users';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -16,14 +17,14 @@ export class PropertiesService {
     this.items.push(properties);
   }
 
-  getItems() {
+  /*getItems() {
     return this.items;
-  }
+  }*/
 
-  clearCart() {
+  /*clearCart() {
     this.items = [];
     return this.items;
-  }
+  }*/
 
   list(): Observable<Property[]> {
     return this.http.get<Property[]>('https://airbnb-back-properties.herokuapp.com/all');
@@ -33,4 +34,9 @@ export class PropertiesService {
   getHost(hostName:String){
     return this.http.get<Property>('https://airbnb-back-properties.herokuapp.com/'+hostName);
   }
+
+  storeUser(user:User){
+    console.log(user);
+  }
+
 }

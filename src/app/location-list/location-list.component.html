@@ -1,15 +1,10 @@
 <app-search (searchChange)="inputChange($event)" [name]="filters.name"></app-search>
 
-<!--list https://airbnb-back-properties.herokuapp.com/-->
-<div class="container" *ngIf="displayGrid == false">
+<div class="container" *ngIf="displayGrid == true">
   <div class="collection">
-    <a href="#!" class="collection-item" *ngFor="let property of properties" routerLink="/details">
-    <span>{{property.name}}</span><br>
-    <span>{{property.description}}</span>
+    <a href="#!" class="collection-item" *ngFor="let property of getProperties()" routerLink="/details">
+      <span>{{property.name}}</span><br>
+      <span>{{property.description}}</span>
     </a>
   </div>
 </div>
-
-
-
-
