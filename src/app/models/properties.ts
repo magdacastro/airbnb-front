@@ -6,7 +6,7 @@ export interface Property {
   price: number;
 }
 
-export const properties = [
+export const properties: Property[] = [
   {
     id: 1,
     name: 'Casa na praia',

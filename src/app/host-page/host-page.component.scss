@@ -1,0 +1,56 @@
+.background {
+  background-image: url("../../assets/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.host-title {
+  color: white;
+  margin: 0 auto;
+  padding: 100px 0px 0px 60px;
+}
+
+main {
+  height: 50vh;
+}
+
+.row-modify {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.row-modify .btn {
+  background-color: #bf905d;
+  font-weight: 400;
+}
+
+.h2-modify {
+  text-align: center;
+  font-weight: 500;
+}
+
+.p-modify {
+  text-align: center;
+}
+
+.carousel {
+  height: 600px;
+}
+
+.carousel-item {
+  padding-top: 65px;
+}
+
+.bg-video {
+  background-color: black;
+}
+
+.col-modify {
+  display: flex;
+  justify-content: end;
+}
+
+.col-modify video {
+  width: 50%;
+}

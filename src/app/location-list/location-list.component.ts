@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { properties, Property } from '../models/properties';
+import { properties } from '../models/properties';
 
 @Component({
   selector: 'app-location-list',

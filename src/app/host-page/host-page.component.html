@@ -1,0 +1,44 @@
+<main class="background">
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <h2 class="host-title">Hospedar é a essência do Airbnb</h2>
+        <div class="row row-modify">
+          <button class="btn">Experimente hospedar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="row">
+    <h2 class="h2-modify">Você pode hospedar onde quiser, quando quiser.</h2>
+    <div class="divider"></div>
+    <p class="p-modify">Dúvidas sobre a atividade dos anfitriões? Pergunte a um <b>Superhost.</b></p>
+  </div>
+  <div class="row">
+    <div class="col s3" *ngFor="let item of getRecommendations()">
+      <img style="width: 80px;" src={{item.img}} alt="" class="circle">
+      <span class="title">{{item.name}}</span>
+      <p>{{item.description}}</p>
+      <p>{{item.location}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-video">
+  <div class="row">
+    <div class="col s6 col-modify">
+      <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+        <source src="../../assets/video/promotional.webm" type="video/mp4">
+      </video>
+    </div>
+    <div class="col s6">
+      <h4 class="host-title">Venha fazer parte do Airbnb</h4>
+      <div class="row row-modify">
+        <button class="btn">Experimente hospedar</button>
+      </div>
+    </div>
+  </div>
+</div>
