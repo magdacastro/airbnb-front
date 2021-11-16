@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { properties } from '../models/properties';
-
+import { properties, Property } from '../models/properties';
+import { PropertiesService } from '../services/properties.service';
 @Component({
   selector: 'app-location-list',
   templateUrl: './location-list.component.html',
   styleUrls: ['./location-list.component.scss']
 })
 export class LocationListComponent implements OnInit {
+
+  properties: Property[] = [];
   myproperties = properties;
   displayGrid = false;
 
@@ -14,9 +16,10 @@ export class LocationListComponent implements OnInit {
     name: "",
   }
 
-  constructor() { }
+  constructor(private propertiesService: PropertiesService) { }
 
   ngOnInit(): void {
+    this.propertiesService.list().subscribe(properties => this.properties = properties);
   }
 
   getProperties(){
