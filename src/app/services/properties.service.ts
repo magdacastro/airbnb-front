@@ -17,26 +17,15 @@ export class PropertiesService {
     this.items.push(properties);
   }
 
-  /*getItems() {
-    return this.items;
-  }*/
-
-  /*clearCart() {
-    this.items = [];
-    return this.items;
-  }*/
-
   list(): Observable<Property[]> {
     return this.http.get<Property[]>('https://airbnb-back-properties.herokuapp.com/all');
-    //return this.http.get<Property[]>('http://localhost:8080/all');
   }
 
-  getHost(hostName:String){
-    return this.http.get<Property>('https://airbnb-back-properties.herokuapp.com/'+hostName);
+  getHost(hostName: String) {
+    return this.http.get<Property>('https://airbnb-back-properties.herokuapp.com/' + hostName);
   }
 
-  storeUser(user:User){
+  storeUser(user: User) {
     console.log(user);
   }
-
 }

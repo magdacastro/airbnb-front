@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { properties, Property } from '../models/properties';
-import { PropertiesService } from '../services/properties.service';
+import { properties, Property } from '../../models/properties';
+import { PropertiesService } from '../../services/properties.service';
 
 @Component({
   selector: 'app-location-list',

@@ -2,7 +2,7 @@
 
 <div class="container" *ngIf="displayGrid == true">
   <div class="collection">
-    <a href="#!" class="collection-item" *ngFor="let property of getProperties()" routerLink="/details">
+    <a href="#!" class="collection-item" *ngFor="let property of getProperties()" routerLink="/detalhes/{{property.id}}">
       <span>{{property.name}}</span><br>
       <span>{{property.description}}</span>
     </a>
