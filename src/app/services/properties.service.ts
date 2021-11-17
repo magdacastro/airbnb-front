@@ -26,7 +26,7 @@ export class PropertiesService {
     return this.http.get<Property>('https://airbnb-back-properties.herokuapp.com/' + hostName);
   }
 
-  storeProperty(user: any): Observable < User > {
-      return this.http.post<User>('https://airbnb-back-properties.herokuapp.com/allUsers', user);
+  storeProperty(user: any): Observable<User> {
+    return this.http.post<User>('https://airbnb-back-properties.herokuapp.com/allUsers', user);
   }
 }

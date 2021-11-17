@@ -1,43 +1,16 @@
-<!--<div>
-  <a title="Home" routerLink="/">
-    <img class="logo" src="assets/img/OLRhvWyv_400x400.png">
-  </a>
-</div>
-
-<div class="host">
-  <h3 class="title">Hospedar<br> é a essência do<br> Airbnb</h3>
-</div>
-
-<div class="host-form">
-  <form (ngSubmit)="onSubmit()">
-      <div>
-          <label for="name">
-            Anfitrião:
-          </label>
-          <input id="name" type="text" class="form-control" name="name" ngModel/>
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btnSubmit" value="Login" />
-       </div>
-  </form>
-</div>-->
-
-
 <div class="container main">
   <div class="row row-modify">
     <div class="img-modify">
       <img class="responsive-img" src="../../assets/img/logo_airbnb.png" />
     </div>
-    <div class="">
-      <h5 class="indigo-text">Entrar no Airbnb</h5>
-    </div>
+    <h5 class="login_title">Entrar no Airbnb</h5>
   </div>
   <form class="row row-modify">
-    <div method="post" (ngSubmit)="onSubmit()">
+    <div method="post">
       <div class='row'>
         <div class='input-field col s12'>
           <i class="material-icons prefix">mail_outline</i>
-          <input class='validate' type='email' name='email' id='email' />
+          <input class='validate' type='email' name='email' id='email' [(ngModel)]="auth.email">
           <label for='email'>Email</label>
         </div>
       </div>
@@ -45,7 +18,7 @@
       <div class='row'>
         <div class='input-field col s12'>
           <i class="material-icons prefix">lock_outline</i>
-          <input class='validate' type='password' name="password" (ngModel)="user.password">
+          <input class='validate' type='password' name="password" id="password" [(ngModel)]="auth.password">
           <label for='password'>Senha</label>
         </div>
         <label style='float: left; padding-left: 20px;'>
@@ -58,7 +31,8 @@
       </div>
       <br />
       <div class='row'>
-        <button type='submit' value="login" name='btn_login' class='col s12 btn btn-large btnSubmit waves-effect indigo'>Login</button>
+        <button (click)="onSubmit()" type='button' value="login" name='btn_login'
+          class='col s12 btn btn-large btnSubmit waves-effect btn_login'>Login</button>
       </div>
 
       <div class="row">
@@ -69,4 +43,3 @@
     </div>
   </form>
 </div>
-

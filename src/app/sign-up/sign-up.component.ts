@@ -9,7 +9,6 @@ import { Month, Gender } from '../models/data';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   public user: User;
   public sex: Gender[] = [
     {
@@ -111,7 +110,7 @@ export class SignUpComponent implements OnInit {
       email: this.user.email,
       password: this.user.password
     };
-    
+
     this.prop.storeProperty(request).subscribe(data => {
       console.log(data);
     })

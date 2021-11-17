@@ -1,17 +1,19 @@
 <div class="container-fluid">
-  <h2>Venha fazer parte da equipe Airbnb</h2>
+  <div class="row text-center">
+    <h4>Hospede-se com o Airbnb</h4>
+    <p>Mais de 500 lugares para você conhecer e se aventurar.</p>
+  </div>
   <div class="container">
     <div class="row">
-      <p>Dados principais:</p>
-      <div class="col s12">
-        <div class="input-field col s6">
+      <div class="col s8">
+        <div class="input-field">
           <input id="input_name" type="text" name="name" [(ngModel)]="user.name" length="25">
           <label for="input_name">Nome</label>
         </div>
-        <div class="input-field col s6">
-          <input id="input_sname" type="text" name="socialname" [(ngModel)]="user.socialName">
-          <label for="input_sname">Nome Social</label>
-        </div>
+      </div>
+      <div class="input-field col s4">
+        <input id="input_sname" type="text" name="socialname" [(ngModel)]="user.socialName">
+        <label for="input_sname">Nome Social</label>
       </div>
     </div>
     <div class="row">
@@ -29,7 +31,7 @@
       </div>
       <div class="col s6">
         <p>Data de nascimento:</p>
-        <div class="col s4">
+        <div class="col s3">
           <div class="input-field col s12">
             <select [(ngModel)]="user.dtNasc.day">
               <option value="" disabled selected>Dia</option>
@@ -37,7 +39,7 @@
             </select>
           </div>
         </div>
-        <div class="col s4">
+        <div class="col s5">
           <div class="input-field col s12">
             <select [(ngModel)]="user.dtNasc.month">
               <option value="" disabled selected>Mês</option>
@@ -56,18 +58,28 @@
       </div>
     </div>
     <div class="row">
-      <div class="input-field col s12">
-        <input id="input_email" type="text" name="email" [(ngModel)]="user.email">
+      <div class="input-field col s6">
+        <input id="input_email" type="text" name="email">
         <label for="input_email">Email</label>
       </div>
-      <div class="input-field col s12">
-        <input id="input_password" type="password" name="password" [(ngModel)]="user.password">
-        <label for="input_password">Senha</label>
+      <div class="input-field col s6">
+        <input id="input_email" type="text" name="c_email" [(ngModel)]="user.email">
+        <label for="input_email">Confirmar Email</label>
       </div>
     </div>
     <div class="row">
-      <div class="col s6">
-        <button class="col s12 btn btn-large waves-effect" (click)="storeProperty()">Cadastrar</button>
+      <div class="input-field col s6">
+        <input id="input_password" type="password" name="password">
+        <label for="input_password">Senha</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="input_password" type="password" name="c_password" [(ngModel)]="user.password">
+        <label for="input_password">Confirmar Senha</label>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col s12">
+        <button class="btn btn-large waves-effect" (click)="storeProperty()">Cadastrar</button>
       </div>
     </div>
   </div>
