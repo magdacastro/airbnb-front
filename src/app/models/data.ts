@@ -4,12 +4,6 @@ export interface Date {
   year: number;
 }
 
-export interface Gender {
-  name: string;
-  value: string;
-}
-
-export interface Month {
-  name: string;
-  value: number;
+export interface Sex {
+  type: string;
 }

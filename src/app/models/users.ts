@@ -1,13 +1,13 @@
-import { Date, Gender } from "./data"
+import { Sex, Date } from "./data"
 import { Property } from "./properties"
 
 export interface User {
     id: number;
     name: string;
-    socialName:string;
+    socialname: string;
     properties: Property[];
-    gender: Gender;
-    dtNasc: Date;
+    sex: Sex;
+    datebirth: Date;
     email:string;
     password:string;
 }
@@ -17,9 +17,9 @@ export const users: User[] = [
         id: 1,
         name: "Caroline",
         email:"carol@email.com",
-        socialName: "Carol",
-        gender: { name: "Female", value: "F"},
-        dtNasc: { day: 3, month: 5, year: 1995 },
+        socialname: "Carol",
+        sex: { type: "female"},
+        datebirth: { day: 3, month: 5, year: 1995 },
         password:"123456",
         properties: [
           {
@@ -41,9 +41,9 @@ export const users: User[] = [
     {
       id: 2,
       name: "João Pedro",
-      socialName: "João",
-      gender: { name: "Male", value: "M"},
-      dtNasc: { day: 3, month: 5, year: 1995 },
+      socialname: "João",
+      sex: { type: "female"},
+      datebirth: { day: 3, month: 5, year: 1995 },
       email:"jpedro@email.com",
       password:"123456",
       properties: []
