@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PropertiesService } from '../services/properties.service';
 import { User } from '../models/users';
 import { Month, Gender } from '../models/data';
@@ -78,7 +79,7 @@ export class SignUpComponent implements OnInit {
     }
   ];
 
-  constructor(private prop: PropertiesService) {
+  constructor(private prop: PropertiesService, private route: Router) {
     this.user = {
       id: 0,
       name: "",
@@ -113,6 +114,7 @@ export class SignUpComponent implements OnInit {
 
     this.prop.storeProperty(request).subscribe(data => {
       console.log(data);
+      this.route.navigateByUrl('/');
     })
   }
 

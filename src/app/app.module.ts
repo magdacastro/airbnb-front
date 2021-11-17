@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LocationDetailsComponent } from './location/location-details/location-details.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
+import { PropertyOffersComponent } from './property-offers/property-offers.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthComponent } from './auth/auth.component';
     SignUpComponent,
     LocationDetailsComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    PropertyOffersComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { AuthComponent } from './auth/auth.component';
       { path: 'login', component: AuthComponent},
       { path: 'anfitriao', component: HostPageComponent},
       { path: 'cadastre-se', component: SignUpComponent},
+      { path: 'ofertas', component: PropertyOffersComponent},
       { path: 'detalhes/:id', component: LocationDetailsComponent}
 
     ])
