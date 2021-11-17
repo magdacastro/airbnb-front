@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { CookieService } from '../services/cookie.service';
 import { Auth } from '../models/auth';
 import { User } from '../models/users';
 
@@ -15,7 +16,7 @@ export class AuthComponent implements OnInit {
     password: ""
   };
 
-  constructor(private route: Router, private userService: UserService) { }
+  constructor(private route: Router, private userService: UserService, private cookieService: CookieService) { }
 
   ngOnInit(): void { }
 
@@ -28,6 +29,10 @@ export class AuthComponent implements OnInit {
       const user = response.find((user: User) => this.auth.email === user.email && this.auth.password === user.password);
 
       if (typeof user === typeof {}) {
+        this.cookieService.setCookie("user.email", user.email, 5);
+        this.cookieService.setCookie("user.name", user.name, 5);
+        this.cookieService.setCookie("user.socialName", user.socialName, 5);
+
         /* Set an user cookie here... */
         this.route.navigateByUrl('/');
       }
