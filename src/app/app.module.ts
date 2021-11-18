@@ -16,6 +16,7 @@ import { LocationDetailsComponent } from './location/location-details/location-d
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { PropertyOffersComponent } from './property-offers/property-offers.component';
+import { AddPropertyComponent } from './add-property/add-property.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PropertyOffersComponent } from './property-offers/property-offers.compo
     LocationDetailsComponent,
     HomeComponent,
     AuthComponent,
-    PropertyOffersComponent
+    PropertyOffersComponent,
+    AddPropertyComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { PropertyOffersComponent } from './property-offers/property-offers.compo
       { path: 'anfitriao', component: HostPageComponent},
       { path: 'cadastre-se', component: SignUpComponent},
       { path: 'ofertas', component: PropertyOffersComponent},
-      { path: 'detalhes/:id', component: LocationDetailsComponent}
+      { path: 'detalhes/:id', component: LocationDetailsComponent},
+      { path: 'details-host', component: AddPropertyComponent}
 
     ])
   ],
