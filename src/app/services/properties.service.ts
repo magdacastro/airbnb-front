@@ -33,7 +33,6 @@ export class PropertiesService {
 
   storeProperty(user: any): Observable<User> {
     return this.http.post<User>('https://airbnb-back-properties.herokuapp.com/allUsers', user);
-  storeUser(user: User) {
     console.log(user);
   }
 
