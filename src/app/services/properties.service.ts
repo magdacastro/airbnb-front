@@ -35,6 +35,10 @@ export class PropertiesService {
     console.log(user);
   }
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   /** POST: add a new property to the server */
   addProperty(property: Property): Observable<Property> {
     return this.http.post<Property>(this.propertyUrl, property, this.httpOptions).pipe(
@@ -53,10 +57,6 @@ export class PropertiesService {
     );
   }
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
@@ -75,43 +75,4 @@ export class PropertiesService {
     this.messageService.add(`PropertyService: ${message}`);
   }
 
-   /** POST: add a new property to the server */
-   addProperty(property: Property): Observable<Property> {
-    return this.http.post<Property>(this.propertyUrl, property, this.httpOptions).pipe(
-      tap((newProperty: Property) => this.log(`added property w/ id=${newProperty.id}`)),
-      catchError(this.handleError<Property>('addProperty'))
-    );
-  }
-
-  /** DELETE: delete the hero from the server */
-  deleteProperty(id: number): Observable<Property> {
-    const url = `${this.propertyUrl}/${id}`;
-
-    return this.http.delete<Property>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted property id=${id}`)),
-      catchError(this.handleError<Property>('deleteProperty'))
-    );
-  }
-
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
-
-      // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}`);
-
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
-    };
-  }
-
-  private log(message: string) {
-    this.messageService.add(`PropertyService: ${message}`);
-  }
 }
