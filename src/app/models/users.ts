@@ -1,13 +1,13 @@
-import { Sex, Date } from "./data"
+import { Date, Gender } from "./data"
 import { Property } from "./properties"
 
 export interface User {
     id: number;
     name: string;
-    socialname: string;
+    socialName:string;
     properties: Property[];
-    sex: Sex;
-    datebirth: Date;
+    gender: Gender;
+    dtNasc: Date;
     email:string;
     password:string;
 }
