@@ -1,0 +1,20 @@
+<div class="property-form">
+    <h3>Adicione uma nova propriedade</h3>
+    <label for="new-property">Property: </label>
+    <input id="new-property" #propertyName/>
+    <label for="new-property">Descrition: </label>
+    <input id="new-property" #propertyDescription/>
+    <!--<label for="new-property">Price: </label>
+    <input id="new-property" #propertyPrice/>-->
+    <label for="new-property">Host: </label>
+    <input id="new-property" #propertyHost/>
+    <!--<label for="new-property">Reserved: </label>
+    <input id="new-property" #propertyReserved/>-->
+    <label for="new-property">Localization: </label>
+    <input id="new-property" #propertyLocalization/>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button class="add-button" (click)="add(propertyName.value, propertyDescription.value,  propertyHost.value,  propertyLocalization.value); propertyName.value='';propertyDescription.value=''; propertyHost.value='';  propertyLocalization.value=''">
+        Add Property
+    </button>
+</div>
