@@ -83,10 +83,10 @@ export class SignUpComponent implements OnInit {
     this.user = {
       id: 0,
       name: "",
-      socialName: "",
+      socialname: "",
       properties: [],
       gender: { name: "", value: "" },
-      dtNasc: { day: 0, month: 0, year: 0 },
+      datebirth: { day: 0, month: 0, year: 0 },
       email: "",
       password: ""
     }
@@ -107,7 +107,7 @@ export class SignUpComponent implements OnInit {
       socialName: this.user.socialName,
       properties: [],
       gender: this.user.gender.value,
-      dtNasc: `${this.user.dtNasc.day}/${this.user.dtNasc.month}/${this.user.dtNasc.year}`,
+      datebirth: `${this.user.datebirth.day}/${this.user.datebirth.month}/${this.user.datebirth.year}`,
       email: this.user.email,
       password: this.user.password
     };

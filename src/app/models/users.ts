@@ -4,10 +4,10 @@ import { Property } from "./properties"
 export interface User {
     id: number;
     name: string;
-    socialName:string;
+    socialname:string;
     properties: Property[];
     gender: Gender;
-    dtNasc: Date;
+    datebirth: Date;
     email:string;
     password:string;
 }
