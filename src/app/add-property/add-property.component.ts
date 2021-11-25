@@ -23,7 +23,7 @@ export class AddPropertyComponent implements OnInit {
     localization = localization.trim();
     if (!name) { return; }
     this.propertiesService.addProperty({ name, description } as Property)
-      .subscribe(property => {
+      .subscribe((property:Property) => {
         this.properties.push(property);
       });
   }

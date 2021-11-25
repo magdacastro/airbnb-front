@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   @Input() name: string = "";
   @Output() searchChange = new EventEmitter<String>();
 
+  
   constructor() {
     this.formInput = this.name;
   }

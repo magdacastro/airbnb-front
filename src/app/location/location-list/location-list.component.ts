@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { properties, Property } from '../../models/properties';
+import { Property } from '../../models/properties';
 import { PropertiesService } from '../../services/properties.service';
 
 @Component({
@@ -41,7 +41,6 @@ export class LocationListComponent implements OnInit {
 
   inputChange(event: any): void {
     this.filters.name = event;
-
     this.displayGrid = this.filters.name.length > 0 ? true : false;
   }
 }

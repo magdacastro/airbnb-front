@@ -31,7 +31,7 @@ export class AuthComponent implements OnInit {
       if (typeof user === typeof {}) {
         this.cookieService.setCookie("user.email", user.email, 5);
         this.cookieService.setCookie("user.name", user.name, 5);
-        this.cookieService.setCookie("user.socialName", user.socialName, 5);
+        this.cookieService.setCookie("user.socialname", user.socialname, 5);
 
         /* Set an user cookie here... */
         this.route.navigateByUrl('/');

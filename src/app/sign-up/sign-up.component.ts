@@ -104,7 +104,7 @@ export class SignUpComponent implements OnInit {
   storeProperty() {
     const request = {
       name: this.user.name,
-      socialName: this.user.socialName,
+      socialName: this.user.socialname,
       properties: [],
       gender: this.user.gender.value,
       datebirth: `${this.user.datebirth.day}/${this.user.datebirth.month}/${this.user.datebirth.year}`,
